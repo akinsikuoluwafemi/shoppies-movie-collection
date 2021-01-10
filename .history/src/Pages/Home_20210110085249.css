@@ -1,0 +1,18 @@
+.home-wrapper {
+    padding: 1rem;
+}
+
+.search-wrapper {
+    /* background: pink; */
+    width: 100%;
+    /* padding-top: 2rem; */
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gridga
+}
+.home-wrapper_search {
+    /* margin: .5rem; */
+    padding-bottom: 1rem;
+    
+}
