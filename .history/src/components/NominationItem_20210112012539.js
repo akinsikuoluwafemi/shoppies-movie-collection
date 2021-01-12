@@ -23,8 +23,6 @@ export default function NominationItem({ movie }) {
         setNominatedMovies(filteredNomMovies);
         localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
 
-        alert("Removed from Local Storage");
-        setShowBanner(false);
     }
       
   };

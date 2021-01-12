@@ -17,16 +17,15 @@ export default function NominationItem({ movie }) {
 
   const removeNominations = () => {
     if(movie){
-        let filteredNomMovies = nominatedMovies.filter(
-          (nmovies) => nmovies !== movie
-        );
-        setNominatedMovies(filteredNomMovies);
-        localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
-
-        alert("Removed from Local Storage");
-        setShowBanner(false);
+        
     }
-      
+      let filteredNomMovies = nominatedMovies.filter(
+      (nmovies) => nmovies !== movie
+    );
+    setNominatedMovies(filteredNomMovies);
+    localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
+    alert("Removed from Local Storage");
+    setShowBanner(false);
   };
 
   const removeFromSearch = () => {

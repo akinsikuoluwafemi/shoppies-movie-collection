@@ -17,9 +17,10 @@ const { REACT_APP_IMDB_KEY } = process.env;
     setLoading(true);
 
     let result = await axios
-      .get(`http://www.omdbapi.com/?apikey=${REACT_APP_IMDB_KEY}&s=${query}`)
+      .get(`http://www.omdbapi.com/?apikey=2a3aa076&s=${query}`)
       .then(
         (response) => {
+
           setAllMovies(response.data.Search);
           setLoading(false);
         },

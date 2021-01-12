@@ -24,7 +24,7 @@ export default function NominationItem({ movie }) {
         localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
 
         alert("Removed from Local Storage");
-        setShowBanner(false);
+    setShowBanner(false);
     }
       
   };
