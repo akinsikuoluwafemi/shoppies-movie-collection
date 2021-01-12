@@ -16,16 +16,15 @@ export default function NominationItem({ movie }) {
   const { allMovies, setAllMovies } = useContext(AllMoviesContext);
 
   const removeNominations = () => {
-        let filteredNomMovies = nominatedMovies.filter(
-          (nmovies) => nmovies !== movie
-        );
-        setNominatedMovies(filteredNomMovies);
-        localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
+        // let filteredNomMovies = nominatedMovies.filter(
+        //   (nmovies) => nmovies !== movie
+        // );
+        // setNominatedMovies(filteredNomMovies);
+        // localStorage.setItem("n-movies", JSON.stringify(filteredNomMovies));
 
-        alert("Removed from Local Storage");
-        setShowBanner(false);
-    //   console.log(movie)
-      return filteredNomMovies
+        // alert("Removed from Local Storage");
+        // setShowBanner(false);
+      console.log(movie)
   };
 
   const removeFromSearch = () => {

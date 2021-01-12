@@ -24,8 +24,8 @@ export default function NominationItem({ movie }) {
 
         alert("Removed from Local Storage");
         setShowBanner(false);
-    //   console.log(movie)
-      return filteredNomMovies
+    }
+      
   };
 
   const removeFromSearch = () => {
