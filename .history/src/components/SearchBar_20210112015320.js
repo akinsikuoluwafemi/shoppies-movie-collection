@@ -12,6 +12,7 @@ export default function SearchBar() {
 
   const {  setLoading } = useContext(LoadingContext);
 
+const { REACT_APP_IMDB_KEY } = process.env;
   const getMovies = async () => {
     setLoading(true);
 

@@ -12,11 +12,12 @@ export default function SearchBar() {
 
   const {  setLoading } = useContext(LoadingContext);
 
+const { REACT_APP_IMDB_KEY } = process.env;
   const getMovies = async () => {
     setLoading(true);
 
     let result = await axios
-      .get(`http://www.omdbapi.com/?apikey=2a3aa076&s=${query}`)
+      .get(`http://www.omdbapi.com/?apikey=&s=${query}`)
       .then(
         (response) => {
           setAllMovies(response.data.Search);
