@@ -32,6 +32,15 @@ export default function Home() {
     JSON.parse(localStorage.getItem("n-movies")) || []
   );
 
+  const getUniqueNominations = (arr) => {
+    let uniqueArr = [...new Set(arr)];
+    console.log(uniqueArr);
+    if (!uniqueArr) {
+      alert("This movie has been nominated");
+    }
+
+    return uniqueArr;
+  };
 
   return (
     <QueryContext.Provider value={{ query, setQuery }}>

@@ -17,8 +17,7 @@ export default function Home() {
     if (nominatedMovies.length === 5) {
       setShowBanner(true);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [nominatedMovies.length]);
 
   const [allMovies, setAllMovies] = useState([]);
 
@@ -32,6 +31,15 @@ export default function Home() {
     JSON.parse(localStorage.getItem("n-movies")) || []
   );
 
+  const getUniqueNominations = (arr) => {
+    let uniqueArr = [...new Set(arr)];
+    console.log(uniqueArr);
+    if (!uniqueArr) {
+      alert("This movie has been nominated");
+    }
+
+    return uniqueArr;
+  };
 
   return (
     <QueryContext.Provider value={{ query, setQuery }}>
